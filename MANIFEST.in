@@ -1,0 +1,4 @@
+graft piggy_money/templates
+graft piggy_money/static
+include piggy_money/schema.sql
+

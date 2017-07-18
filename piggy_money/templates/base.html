@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+{% include "links.html" %}
+
+</head>
+<body>
+
+{% include "header.html" %}
+
+
+<div class="container" id="site-container">
+    {% block body %}
+        <p>This is the default text if no body is loaded.</p>
+    {% endblock %}
+</div>
+
+
+{% include "footer.html" %}
+
+
+</body>
+</html>

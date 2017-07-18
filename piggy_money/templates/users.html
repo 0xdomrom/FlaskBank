@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% if session.logged_in %}
+Users on system: 
+
+{% endif %}
+<ul>
+{% for entry in entries %}
+<li>
+	{{ entry.username }} 
+</li>
+{% else %} 
+	No entries???? :(
+{% endfor %} 
+</ul>
+{% endblock %}
