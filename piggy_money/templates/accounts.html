@@ -6,14 +6,27 @@
 Accounts you have: 
 
 {% endif %}
-<ul>
+<ul style="list-style-type:none">
 {% for entry in entries %}
 <li>
-	{{ entry.account_num }} 
-	{{ entry.balance }}
+<div style="" onclick="load_account({{ entry.account_num }}, this);">
+	{{ entry.account_num }} <br/>{{ entry.balance }}<br/><br/>
+</div>
 </li>
 {% else %} 
-	You dont have an account yet???
+	You don't have an account yet :(
 {% endfor %} 
 </ul>
+
+<form action="{{ url_for('api_create_account') }}" method=post>
+  <dl>
+    <dt style="margin:0.2em 0 0 0; display: inline">Account:
+    <dd style="margin-left: 20px"><input type=text name=account_num>
+    <dt style="margin:0.2em 0 0 0; display: inline">Balance:
+    <dd style="margin-left: 20px"><input type=text name=balance>
+    <br/><br/>
+    <dd style="margin-left: 20px"><input style="background-color: #4CAF50;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;" type=submit value='Create Account'>
+  </dl>
+</form>
+
 {% endblock %}

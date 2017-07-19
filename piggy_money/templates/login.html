@@ -7,11 +7,12 @@
 
 <form action="{{ url_for('login') }}" method=post>
   <dl>
-    <dt>Username:
-    <dd><input type=text name=username>
-    <dt>Password:
-    <dd><input type=password name=password>
-    <dd><input type=submit value=Login>
+    <dt style="margin:0.2em 0 0 0; display: inline">Username:
+    <dd style="margin-left: 20px"><input type=text name=username>
+    <dt style="margin:0.2em 0 0 0; display: inline">Password:
+    <dd style="margin-left: 20px"><input type=password name=password>
+    <br/><br/>
+    <dd style="margin-left: 20px"><input style="background-color: #4CAF50;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;" type=submit value=Login>
   </dl>
 </form>
 
