@@ -56,3 +56,4 @@ def checks():
 
 
 from piggy_money.views import *
+from piggy_money.api import *

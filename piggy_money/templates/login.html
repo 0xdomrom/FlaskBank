@@ -5,7 +5,7 @@
 <h2>Login</h2>
 {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
 
-<form action="{{ url_for('login') }}" method=post>
+<form id="LoginForm" action="#" method=post>
   <dl>
     <dt style="margin:0.2em 0 0 0; display: inline">Username:
     <dd style="margin-left: 20px"><input type=text name=username>
